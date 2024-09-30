@@ -1,0 +1,13 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.hero-heading {
+font-size: clamp(24px, 4.13vw, 60px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
