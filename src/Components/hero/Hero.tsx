@@ -11,12 +11,7 @@ const Hero = () => {
         </h1>
       </div>
       <div className="hero-image">
-        <Image
-          src="/Saas-images/Illustration.png"
-          alt="Hero"
-          width={500}
-          height={500}
-        />
+        <Image src="/Illustration.png" alt="Hero" width={500} height={500} />
       </div>
     </div>
   );
