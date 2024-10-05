@@ -1,0 +1,8 @@
+.companies{
+    background-color: red;
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}

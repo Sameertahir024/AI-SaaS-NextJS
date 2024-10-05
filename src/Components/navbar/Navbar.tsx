@@ -1,19 +1,18 @@
 import React from "react";
-import Avatars from "../common/Avatars";
 import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
+// import { useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+  // const { user } = useUser();
+
+  // if (!user) return window.alert("NO user found");
   return (
     <div className="main">
       <div className="logo">
-        <Image
-          src="/Saas-images/svgs/Logo.svg"
-          alt="logo"
-          width={319}
-          height={36}
-        />
+        <Image src="/svgs/Logo.svg" alt="NAv-logo" width={219} height={36} />
       </div>
       <div className="links-container">
         <ul className="links">
@@ -28,7 +27,13 @@ const Navbar = () => {
           </li>
         </ul>
         <div>
-          <Avatars name="H" />
+          <UserButton
+            appearance={{
+              elements: {
+                userButtonAvatarBox: "size-6",
+              },
+            }}
+          />
         </div>
       </div>
     </div>

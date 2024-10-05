@@ -9,9 +9,21 @@ const Hero = () => {
         <h1 className="hero-heading">
           Navigating the digital landscape for success
         </h1>
+        <p>
+          Our digital marketing agency helps businesses grow and succeed online
+          through a range of services including SEO, PPC, social media
+          marketing, and content creation.
+        </p>
+        <button className="btn">Book a consultation</button>
       </div>
       <div className="hero-image">
-        <Image src="/Illustration.png" alt="Hero" width={500} height={500} />
+        <Image
+          src="/Illustration.png"
+          alt="Hero"
+          width={500}
+          height={500}
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
       </div>
     </div>
   );

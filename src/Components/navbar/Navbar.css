@@ -1,7 +1,5 @@
 .main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding:0 100px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,5 +53,38 @@
 }
 
 
+@media (max-width: 768px) {
+    .links-container {
+        display: none;
+    }
+
+    .toggle-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+.toggle-icon {
+    display: none;
+}
+
+/* Styles for when the menu is open */
+.links-container.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.links-container.open .links {
+    flex-direction: column;
+    gap: 20px;
+}
 
 
