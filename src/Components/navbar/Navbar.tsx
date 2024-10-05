@@ -3,12 +3,8 @@ import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
-// import { useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
-  // const { user } = useUser();
-
-  // if (!user) return window.alert("NO user found");
   return (
     <div className="main">
       <div className="logo">
