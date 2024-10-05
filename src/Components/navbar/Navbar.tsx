@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+  const { user } = useUser();
   return (
     <div className="main">
       <div className="logo">
@@ -23,13 +25,19 @@ const Navbar = () => {
           </li>
         </ul>
         <div>
-          <UserButton
-            appearance={{
-              elements: {
-                userButtonAvatarBox: "size-6",
-              },
-            }}
-          />
+          {user?.firstName ? (
+            <>
+              <UserButton
+                appearance={{
+                  elements: {
+                    userButtonAvatarBox: "size-6",
+                  },
+                }}
+              />
+            </>
+          ) : (
+            <Link href="/sign-in">Sign in</Link>
+          )}
         </div>
       </div>
     </div>
